@@ -20,6 +20,9 @@ public class DashboardPageElements extends CommonMethods{
 	
 	@FindBy(xpath = "//a[@id='menu_pim_viewPimModule']")
 	public WebElement PIM;
+	
+	@FindBy(xpath="//a[@id='menu_core_viewDefinedPredefinedReports']")
+	public WebElement Reports;
 
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
@@ -29,4 +32,11 @@ public class DashboardPageElements extends CommonMethods{
 		jsClick(PIM);
 		jsClick(addEmp);
 	}
+	
+	public void navigateToReports() {
+		jsClick(PIM);
+		jsClick(Reports);
+	}
+	
+	
 }
